@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: url("https://source.unsplash.com/1920x1080/?landscape");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Altere as cores e a direção do degradê conforme necessário */
+  }
+  .container {
+    margin-top: 100px;
+    margin-left: 15px;
+    padding: 20px;
+    background: rgba(194, 192, 192, 0.5); /* Fundo preto com 50% de transparência */
+    padding: 20px; /* Ajuste o preenchimento conforme necessário */
+    border: none; /* Opcional: Adiciona uma borda à div */
+    color: #fff; /* Cor do texto dentro da div */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 80px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+  }
+
+  button:hover {
+    opacity: .8;
+  }
+  button:active {
+    opacity: .5;
+  }
+
+  #rock {
+    background-color: blueviolet;
+  }
+  #paper {
+    background-color: rgb(10, 182, 33);
+  }
+  #scissors {
+    background-color: #7dbeed;
+  }
+  h1 {
+    color: black;
+    margin-bottom: 15px;
+    font-size: 55px;
+  }
+  p {
+    margin-top: 15px;
+    font-size: 35px;
+    color: black;
+    font-weight: 700;
+  }
+  .span-you {    
+    color: rgb(0, 60, 255);
+  }
+  .span-machine {
+    color: red;
+  }
