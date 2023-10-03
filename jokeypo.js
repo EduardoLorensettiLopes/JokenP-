@@ -5,6 +5,12 @@ const machineScore = document.querySelector('.span-machine')
 const pYou = document.querySelector('.p-you')
 const pMachine = document.querySelector('.p-machine')
 
+const  GAME_OPTIONS = {
+    ROCK: 'rock',
+    PAPER: 'paper',
+    SCISSORS: 'scissors'
+}
+
 
 let humanScoreNumber = 0
 let machineScoreNumber = 0
@@ -15,7 +21,7 @@ const playHuman = (humanChoice) => {
 
 
 const playMachine = () => {
-    const choices = ['rock', 'paper', 'scissors']
+    const choices = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS]
     const randomNumber = Math.floor(Math.random() * 3)
 
     return choices[randomNumber]
@@ -27,10 +33,10 @@ const playTheGame = (human, machine) => {
 
 
     if (human === machine) {
-        if (human === 'rock') {
+        if (human === GAME_OPTIONS.ROCK) {
             pYou.innerHTML = "&#x1F44A"
             pMachine.innerHTML = "&#x1F44A"
-        } else if (human === 'paper') {
+        } else if (human === GAME_OPTIONS.PAPER) {
             pYou.innerHTML = "&#x1f590";
             pMachine.innerHTML = "&#x1f590"
         } else {
@@ -39,13 +45,13 @@ const playTheGame = (human, machine) => {
         }
         result.innerHTML = "Deu Empate"
     } else if (
-        (human === 'paper' && machine === 'rock') ||
-        (human === 'rock' && machine === 'scissors') ||
-        (human === 'scissors' && machine === 'paper')) {
-        if (human === 'rock' && machine === 'scissors') {
+        (human === GAME_OPTIONS.PAPER && machine === GAME_OPTIONS.ROCK) ||
+        (human === GAME_OPTIONS.ROCK && machine === GAME_OPTIONS.SCISSORS) ||
+        (human === GAME_OPTIONS.SCISSORS && machine === GAME_OPTIONS.PAPER)) {
+        if (human === GAME_OPTIONS.ROCK && machine === GAME_OPTIONS.SCISSORS) {
             pYou.innerHTML = "&#x1F44A"
             pMachine.innerHTML = "&#x270c"
-        } else if (human === 'paper' && machine === 'rock') {
+        } else if (human === GAME_OPTIONS.PAPER && machine === GAME_OPTIONS.ROCK) {
             pYou.innerHTML = "&#x1f590";
             pMachine.innerHTML = "&#x1F44A"
         } else {
@@ -56,10 +62,10 @@ const playTheGame = (human, machine) => {
         youScore.innerHTML = humanScoreNumber
         result.innerHTML = "Você Ganhou"
     } else {
-        if (human === 'rock' && machine === 'paper') {
+        if (human === GAME_OPTIONS.ROCK && machine === GAME_OPTIONS.PAPER) {
             pYou.innerHTML = "&#x1F44A"
             pMachine.innerHTML = "&#x1f590"
-        } else if (human === 'paper' && machine === 'scissors') {
+        } else if (human === GAME_OPTIONS.PAPER && machine === GAME_OPTIONS.SCISSORS) {
             pYou.innerHTML = "&#x1f590";
             pMachine.innerHTML = "&#x270c"
         } else {
